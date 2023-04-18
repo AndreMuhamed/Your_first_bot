@@ -2,6 +2,8 @@
 
 Here we prepared you to write Discord bot. What you need to know, what you need to download, everything is in this spirit.
 
+![d3752D8J_big_poster_wd](https://user-images.githubusercontent.com/128980327/232898228-6e19e718-6a2d-43b5-aca8-662ef6629ca9.jpg)
+
 
 
 To create a Discord bot in Python, you need to install Python, the discord.py library, and any text editor or integrated development environment (IDE).
