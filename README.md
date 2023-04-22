@@ -57,3 +57,6 @@ async def on_message(message):
         
 This is just a small example of how to start creating a Discord bot in Python. For more information, visit the discord.py official documentation.
 
+
+каукамкауа
+
