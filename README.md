@@ -59,4 +59,4 @@ This is just a small example of how to start creating a Discord bot in Python. F
 
 
 каукамкауа
-еп4пк4епппппппуу
+еп4пк4епппппппууогггггггггггггггггггке
