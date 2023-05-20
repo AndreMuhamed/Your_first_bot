@@ -59,3 +59,4 @@ This is just a small example of how to start creating a Discord bot in Python. F
 
 піраввравррряяя
 
+авррварварар
