@@ -1,58 +1,67 @@
 # Start of Discord bot development.
 
-Here we prepared you to write Discord bot. What you need to know, what you need to download, everything is in this spirit.
+Щоб створити свого першого Discord-бота, потрібно виконати кілька кроків:
 
-![d3752D8J_big_poster_wd](https://user-images.githubusercontent.com/128980327/232898228-6e19e718-6a2d-43b5-aca8-662ef6629ca9.jpg)
+Крок 1: Створення нового Discord-бота і отримання токену бота.
+1. Перейдіть на сайт розробника Discord (https://discord.com/developers/applications).
+2. Увійдіть в свій обліковий запис або створіть новий.
+3. Натисніть кнопку "New Application" (Нова програма) і введіть назву свого бота.
+4. Перейдіть на вкладку "Bot" (Бот) у меню зліва.
+5. Натисніть кнопку "Add Bot" (Додати бота) і підтвердьте створення бота.
+6. В розділі "Token" (Токен) натисніть кнопку "Copy" (Скопіювати) для збереження токена бота. Зверніть увагу, що цей токен повинен зберігатись у таємниці, і не може бути розміщений у відкритому коді або відправлений комусь іншому.
 
+Крок 2: Запрошення бота на свій сервер Discord.
+1. Поверніться на вкладку "General Information" (Загальна інформація) вашої програми.
+2. Знайдіть ваш Client ID (ідентифікатор клієнта) і скопіюйте його.
+3. Увійдіть на свій Discord-сервер і перейдіть до вкладки "OAuth2" у налаштуваннях сервера.
+4. У розділі "OAuth2 URL Generator" (Генератор URL для OAuth2) виберіть опцію "bot".
+5. Під опцією "Scopes" (Сфери) оберіть "bot".
+6. Під опцією "Bot Permissions" (Права бота) виберіть необхідні права для свого бота (наприклад, "Read Messages", "Send Messages" тощо).
+7. Скопіюйте згенерований URL-адресу OAuth2 і відкрийте його у веб-браузері.
+8. Виберіть сервер, на який ви хочете запросити свого бота, і натисніть "Authorize" (Авторизувати).
 
+Крок 3: Написання коду для бота.
+Вам потрібно використовувати бібліотеку, яка надає зручний інтерфейс для роботи з API Discord. Наприклад, ви можете використовувати бібліотеку discord.py для Python.
 
-To create a Discord bot in Python, you need to install Python, the discord.py library, and any text editor or integrated development environment (IDE).
+Приклад коду для базового бота на discord.py:
 
-1. Python can be downloaded from the official website: https://www.python.org/downloads/
-
-2. You can use any text editor or IDE to create Python code. Some of the most popular options:
-
-Visual Studio Code (https://code.visualstudio.com/)
-PyCharm (https://www.jetbrains.com/pycharm/)
-Sublime Text (https://www.sublimetext.com/)
-It is important to note that it is not necessary to use an IDE, but it can facilitate the process of developing and debugging the code.
-
-3. Some additional tools may be useful, for example, Git (https://git-scm.com/) for version control and source code management, as well as the Discord Developer Portal (https://discord.com/developers/applications/ ) to create and configure your Discord app and bot.
-
-4. Install the required Python libraries, such as discord.py, using the pip package manager. For example, type the following command in a terminal to install discord.py:
-
-Copy code
-pip install discord.py
-
-5. Create a new Python file and import the discord.py library:
-
-Copy code
+```python
 import discord
+from discord.ext import commands
 
-6. Create a Discord client object that will be used to communicate with the Discord API:
+intents = discord.Intents.default()
+intents.message_content = True
 
-Copy code
-client = discord.Client()
+bot = commands.Bot(command_prefix='!', intents=intents)
 
-7. Create a function that will be called when the bot is ready for use:
-
-Copy code
-@client.event
+@bot.event
 async def on_ready():
-     print('Bot is ready.')
-    
-8. Start the bot using the authorization token you received in step 1:
+    print(f'Logged in as {bot.user.name}')
 
-Copy code
-client.run('your_token_here')
-
-9. Now you can add your own commands and functionality to your bot using various events such as on_message, on_member_join, on_member_remove, etc.
-For example, to add a command that greets a user when they type !hello, you can add the following code:
-
-Copy code
-@client.event
+@bot.event
 async def on_message(message):
-     if message.content.startswith('!hello'):
-         await message.channel.send('Hello!')
-        
-This is just a small example of how to start creating a Discord bot in Python. For more information, visit the discord.py official documentation.
+    if message.author.bot:
+        return  # Ігнорувати повідомлення від ботів
+
+    if message.content.lower().startswith('привіт'):
+        await message.channel.send('Привіт! Я бот!')
+
+    await bot.process_commands(message)
+
+@bot.command(name='привіт')
+async def say_hello(ctx):
+    await ctx.send('Привіт! Я бот!')
+
+bot.run('YOUR_BOT_TOKEN')
+```
+
+Вам також знадобиться встановити бібліотеку discord.py, якщо вона ще не встановлена, за допомогою команди `pip install discord.py`.
+
+Після написання коду збережіть його в файлі з розширенням `.py`, наприклад `bot.py`.
+
+Крок 4: Запуск бота.
+Запустіть свій бот, виконавши файл `bot.py` з командного рядка або засадивши його на хостинговому сервері. Коли бот буде запущений, ви побачите повідомлення "Logged in as..." в консолі.
+
+Тепер ваш Discord-бот повинен бути активний на сервері і готовий ві
+
+дповідати на команди і повідомлення!
