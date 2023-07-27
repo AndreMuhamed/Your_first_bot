@@ -1,6 +1,7 @@
 # Start of Discord bot development.
 
-![DreamShaper_v7_Logo_nickname_Discord_avatar_serverdesigner_pro_0](https://github.com/AndreMuhamed/pogadon/assets/128980327/e020c245-a40c-4c27-bf96-3ac920dad3ab)
+_!Замовити Discord-бота: (https://t.me/admirall_times)!_
+![Untitled-1](https://github.com/AndreMuhamed/pogadon/assets/128980327/23b64a91-e2c1-47cf-aeae-144db6563c08)
 
 Щоб створити свого першого Discord-бота, потрібно виконати кілька кроків:
 
