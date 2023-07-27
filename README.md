@@ -4,7 +4,7 @@ _!Замовити Discord-бота: (https://t.me/admirall_times)!_
 
 ![Untitled-1](https://github.com/AndreMuhamed/pogadon/assets/128980327/23b64a91-e2c1-47cf-aeae-144db6563c08)
 
-Щоб створити свого першого Discord-бота, потрібно виконати кілька кроків:
+**Щоб створити свого першого Discord-бота, потрібно виконати кілька кроків:**
 
 Крок 1: Створення нового Discord-бота і отримання токену бота.
 1. Перейдіть на сайт розробника Discord (https://discord.com/developers/applications).
