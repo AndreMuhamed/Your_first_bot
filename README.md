@@ -67,4 +67,4 @@ After writing the code, save it in a file with the extension `.py`, for example,
 *Step 4: Run the bot.*
 Run your bot by executing the `bot.py` file from the command line or deploying it on a hosting server. Once the bot is running, you should see the message "Logged in as..." in the console.
 
-# Now, your Discord bot should be active on the server and ready to respond to commands and messages!thhhhddddddddddd
+# Now, your Discord bot should be active on the server and ready to respond to commands and messages!
