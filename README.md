@@ -1,4 +1,4 @@
-іпвапвап# Start of Discord Bot Development.
+упуіпукркуркіпвапвап# Start of Discord Bot Development.
 
 _!Order Discord Bot: (https://t.me/admirall_times)!_
 
