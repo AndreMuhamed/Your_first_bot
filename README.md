@@ -4,7 +4,7 @@ _!Order Discord Bot: (https://t.me/admirall_times)!_
 
 ![Untitled-1](https://github.com/AndreMuhamed/pogadon/assets/128980327/23b64a91-e2c1-47cf-aeae-144db6563c08)
 
-***To create your first Discord bot, you need to follow these steps:*** рвоевоопвоововоовов
+***To create your first Discord bot, you need to follow these steps:*** 
 
 *Step 1: Create a new Discord bot and obtain the bot token.*
 1. Go to the Discord Developer website (https://discord.com/developers/applications).
