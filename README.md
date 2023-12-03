@@ -1,4 +1,4 @@
-# Start of Discord Bot Development. ggrerghregrgrgreggrgrerrggergre
+# Start of Discord Bot Development. 
 
 _!Order Discord Bot: (https://t.me/admirall_times)!_   
 
