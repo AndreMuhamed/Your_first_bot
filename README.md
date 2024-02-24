@@ -1,6 +1,5 @@
 # Start of Discord Bot Development. 
-
-_!Order Discord Bot: (https://t.me/admirall_times)!_   
+![image](https://github.com/AndreMuhamed/Pogadon/assets/128980327/879275f3-3b5b-4751-a5a1-495456a16d8d)
 
 ![Untitled-1](https://github.com/AndreMuhamed/pogadon/assets/128980327/23b64a91-e2c1-47cf-aeae-144db6563c08)
 
