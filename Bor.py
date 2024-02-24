@@ -1,27 +1,45 @@
-import discord
-from discord.ext import commands
+import disnake
+from disnake.ext import commands
 
-intents = discord.Intents.default()
-intents.message_content = True
-
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix="/")
 
 @bot.event
 async def on_ready():
-    print(f'Logged in as {bot.user.name}')
+    print(f'Бот запущен как {bot.user}')
 
-@bot.event
-async def on_message(message):
-    if message.author.bot:
-        return  # Ignore messages from bots
+@bot.slash_command(description="Приветствие пользователя")
+async def приветствие(ctx: disnake.ApplicationCommandInteraction):
+    await ctx.response.send_message("Приветствую! Я готов помочь вам.")
 
-    if message.content.lower().startswith('hello'):
-        await message.channel.send('Hello! I am a bot!')
+@bot.slash_command(description="Поддержите наш проект донатом")
+async def донат(ctx: disnake.ApplicationCommandInteraction):
+    # Ваши ссылки на донат
+    patreon_link = "https://www.patreon.com/andremuhamad"
+    donationalerts_link = "https://www.donationalerts.com/r/andremuhamad"
 
-    await bot.process_commands(message)
+    # Отправляем сообщение с ссылками на донат
+    await ctx.send(content=f"**Поддержите наш проект донатом:**\nↈ {donationalerts_link}\nↈ {patreon_link}")
 
-@bot.command(name='hello')
-async def say_hello(ctx):
-    await ctx.send('Hello! I am a bot!')
+@bot.slash_command(description="Приглашение к оценке сервера")
+async def прокачка(ctx: disnake.ApplicationCommandInteraction):
+    # Ваше сообщение с приглашением к оценке сервера
+    message = "Дайте оценку нашему серверу, если не сложно:\n\n" \
+              "※ DiscordServer.Info: https://discordserver.info/1195867892063940671\n" \
+              "※ ServerDiscord: https://server-discord.com/1195867892063940671"
 
-bot.run('YOUR_BOT_TOKEN')
+    # Отправляем сообщение в текстовый канал
+    await ctx.send(content=message)
+
+@bot.slash_command(description="Приглашение к социальным сетям")
+async def соцсеть(ctx: disnake.ApplicationCommandInteraction):
+    # Ваша ссылка на социальные сети
+    social_media_link = "https://bit.ly/3Px7sCH"
+
+    # Отправляем сообщение с ссылкой
+    await ctx.send(content=f"Присоединяйтесь к нашим сообществам в социальных сетях:\n{social_media_link}")
+
+@bot.slash_command(description="Языки программирования")
+async def язык_программирования(ctx: disnake.ApplicationCommandInteraction):
+    await ctx.response.send_message("Мы поддерживаем множество языков программирования, включая Python, JavaScript, Java, C++ и другие.")
+    
+bot.run("YOUR_TOKEN")
