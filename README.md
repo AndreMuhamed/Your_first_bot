@@ -1,33 +1,56 @@
-# Start of Discord Bot Development.
-![image](https://github.com/AndreMuhamed/Pogadon/assets/128980327/879275f3-3b5b-4751-a5a1-495456a16d8d)
+Ось повний вміст для файлу `README.md`, який виглядатиме красиво на GitHub:  
 
-![Untitled-1](https://github.com/AndreMuhamed/pogadon/assets/128980327/23b64a91-e2c1-47cf-aeae-144db6563c08)
+```markdown
+<div align="center">  
+  <h1>🚀 Start of Discord Bot Development</h1>  
+  <p>  
+    Створіть свій перший Discord-бот за допомогою цього покрокового гайда!  
+  </p>  
+  <img src="https://github.com/AndreMuhamed/Pogadon/assets/128980327/879275f3-3b5b-4751-a5a1-495456a16d8d" alt="Discord Development" width="600"/>  
+  <img src="https://github.com/AndreMuhamed/pogadon/assets/128980327/23b64a91-e2c1-47cf-aeae-144db6563c08" alt="Bot Features" width="600"/>  
+</div>  
 
-***To create your first Discord bot, you need to follow these steps:*** 
+---
 
-*Step 1: Create a new Discord bot and obtain the bot token.*
-1. Go to the Discord Developer website (https://discord.com/developers/applications).
-2. Log in to your account or create a new one.
-3. Click on "New Application" and enter the name of your bot.
+## 🎯 **Що це таке?**  
+Це покроковий гайд зі створення вашого першого Discord-бота! Ви навчитесь:  
+- 🔑 Створювати бота та отримувати токен.  
+- ✨ Додавати бота на сервер.  
+- 💻 Писати базовий код для роботи вашого бота.  
 
-4. Go to the "Bot" tab on the left-hand menu.
-5. Click "Add Bot" and confirm to create the bot.
-6. In the "Token" section, click "Copy" to save the bot token. Remember that this token should be kept secret and should not be shared publicly or with anyone else.
+---
 
-*Step 2: Invite the bot to your Discord server.*
-1. Go back to the "General Information" tab of your application.
-2. Find your Client ID and copy it.
-3. Log in to your Discord server and go to the "OAuth2" tab in server settings.
-4. In the "OAuth2 URL Generator" section, select the "bot" option.
-5. Under "Scopes," choose "bot".
-6. Under "Bot Permissions," select the necessary permissions for your bot (e.g., "Read Messages", "Send Messages", etc.).
-7. Copy the generated OAuth2 URL and open it in a web browser.
-8. Choose the server to which you want to invite your bot and click "Authorize".
+<div align="center">  
+  <h2>🛠️ Крок 1: Створення Discord-бота та отримання токена</h2>  
+</div>  
 
-*Step 3: Write the code for your bot.*
-You need to use a library that provides a convenient interface to work with the Discord API. For example, you can use the discord.py library for Python.
+1. Перейдіть до [Discord Developer Portal](https://discord.com/developers/applications).  
+2. Увійдіть до облікового запису або створіть новий.  
+3. Натисніть **"New Application"** та введіть ім'я бота.  
+4. У меню зліва перейдіть до розділу **"Bot"**.  
+5. Натисніть **"Add Bot"** і підтвердьте дію.  
+6. Скопіюйте **токен бота**. Збережіть його в надійному місці — це ваш ключ доступу!  
 
-Here's an example code for a basic bot using discord.py:
+---
+
+<div align="center">  
+  <h2>🌐 Крок 2: Додавання бота на сервер</h2>  
+</div>  
+
+1. Перейдіть до вкладки **"OAuth2"** у вашій аплікації.  
+2. У секції **"OAuth2 URL Generator"** оберіть:  
+   - **Scopes:** `bot`  
+   - **Permissions:** потрібні права для бота (наприклад, `Send Messages`).  
+3. Скопіюйте згенероване посилання та відкрийте його у браузері.  
+4. Виберіть сервер і натисніть **"Authorize"**.  
+
+---
+
+<div align="center">  
+  <h2>💻 Крок 3: Написання коду бота</h2>  
+</div>  
+
+Ваш код на Python із використанням бібліотеки `disnake`:  
 
 ```python
 import disnake
@@ -37,52 +60,69 @@ bot = commands.Bot(command_prefix="/")
 
 @bot.event
 async def on_ready():
-    print(f'Бот запущен как {bot.user}')
+    print(f"Бот запущен як {bot.user}")
 
-@bot.slash_command(description="Приветствие пользователя")
-async def приветствие(ctx: disnake.ApplicationCommandInteraction):
-    await ctx.response.send_message("Приветствую! Я готов помочь вам.")
+@bot.slash_command(description="Привітання користувача")
+async def привіт(ctx: disnake.ApplicationCommandInteraction):
+    await ctx.response.send_message("Привіт! Я готовий допомогти тобі.")
 
-@bot.slash_command(description="Поддержите наш проект донатом")
+@bot.slash_command(description="Посилання на донати")
 async def донат(ctx: disnake.ApplicationCommandInteraction):
-    # Ваши ссылки на донат
-    patreon_link = "https://www.patreon.com/andremuhamad"
-    donationalerts_link = "https://www.donationalerts.com/r/andremuhamad"
+    patreon = "https://www.patreon.com/andremuhamad"
+    alerts = "https://www.donationalerts.com/r/andremuhamad"
+    await ctx.send(f"**Підтримайте проект:**\n- {patreon}\n- {alerts}")
 
-    # Отправляем сообщение с ссылками на донат
-    await ctx.send(content=f"**Поддержите наш проект донатом:**\nↈ {donationalerts_link}\nↈ {patreon_link}")
+@bot.slash_command(description="Запрошення оцінити сервер")
+async def оцінка(ctx: disnake.ApplicationCommandInteraction):
+    feedback = (
+        "※ [DiscordServer.Info](https://discordserver.info/1195867892063940671)\n"
+        "※ [ServerDiscord](https://server-discord.com/1195867892063940671)"
+    )
+    await ctx.send(f"Залиште свою оцінку:\n{feedback}")
 
-@bot.slash_command(description="Приглашение к оценке сервера")
-async def прокачка(ctx: disnake.ApplicationCommandInteraction):
-    # Ваше сообщение с приглашением к оценке сервера
-    message = "Дайте оценку нашему серверу, если не сложно:\n\n" \
-              "※ DiscordServer.Info: https://discordserver.info/1195867892063940671\n" \
-              "※ ServerDiscord: https://server-discord.com/1195867892063940671"
+@bot.slash_command(description="Соціальні мережі")
+async def соцмережі(ctx: disnake.ApplicationCommandInteraction):
+    social = "https://bit.ly/3Px7sCH"
+    await ctx.send(f"Долучайтесь до нас:\n{social}")
 
-    # Отправляем сообщение в текстовый канал
-    await ctx.send(content=message)
-
-@bot.slash_command(description="Приглашение к социальным сетям")
-async def соцсеть(ctx: disnake.ApplicationCommandInteraction):
-    # Ваша ссылка на социальные сети
-    social_media_link = "https://bit.ly/3Px7sCH"
-
-    # Отправляем сообщение с ссылкой
-    await ctx.send(content=f"Присоединяйтесь к нашим сообществам в социальных сетях:\n{social_media_link}")
-
-@bot.slash_command(description="Языки программирования")
-async def язык_программирования(ctx: disnake.ApplicationCommandInteraction):
-    await ctx.response.send_message("Мы поддерживаем множество языков программирования, включая Python, JavaScript, Java, C++ и другие.")
-    
 bot.run("YOUR_TOKEN")
-
 ```
 
-You will also need to install the discord.py library if you haven't already, using the command `pip install discord.py`.
+---
 
-After writing the code, save it in a file with the extension `.py`, for example, `bot.py`.
+<div align="center">  
+  <h2>▶️ Крок 4: Запуск бота</h2>  
+</div>  
 
-*Step 4: Run the bot.*
-Run your bot by executing the `bot.py` file from the command line or deploying it on a hosting server. Once the bot is running, you should see the message "Logged in as..." in the console.
+1. Встановіть `disnake`, якщо ще цього не зробили:  
+   ```bash
+   pip install disnake
+   ```  
+2. Збережіть код у файл (наприклад, `bot.py`).  
+3. Запустіть бот через термінал:  
+   ```bash
+   python bot.py
+   ```  
 
-# Now, your Discord bot should be active on the server and ready to respond to commands and messages!
+---
+
+<div align="center">  
+  <h2>📜 Результат</h2>  
+  <p>Ваш бот тепер активний на сервері! 🥳  
+  Ви можете додавати нові команди та розширювати його функціонал.</p>  
+</div>  
+
+---
+
+<div align="center">  
+  <h2>🤝 Підтримка проекту</h2>  
+  <p>  
+    - Patreon: [Натисніть тут](https://www.patreon.com/andremuhamad)  
+    - DonationAlerts: [Натисніть тут](https://www.donationalerts.com/r/andremuhamad)  
+  </p>  
+</div>  
+
+> **Вдалого кодування!**  
+```
+
+Збережіть цей текст у файл `README.md`. При завантаженні на GitHub він буде виглядати дуже акуратно і професійно.
