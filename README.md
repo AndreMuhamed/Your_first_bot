@@ -107,6 +107,4 @@ bot.run("YOUR_TOKEN")
 </div>  
 
 - Patreon: https://www.patreon.com/andremuhamad)  
-- DonationAlerts: https://www.donationalerts.com/r/andremuhamad)  
-
-> **Вдалого кодування!**
+- DonationAlerts: https://www.donationalerts.com/r/andremuhamad)
