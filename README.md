@@ -1,11 +1,18 @@
 <div align="center">  
-  <h1>🚀 Start of Discord Bot Development</h1>  
-  <p>  
-    Створіть свій перший Discord-бот за допомогою цього покрокового гайда!  
-  </p>  
-  <img src="https://github.com/AndreMuhamed/Pogadon/assets/128980327/879275f3-3b5b-4751-a5a1-495456a16d8d" alt="Discord Development" width="600"/>  
-  <img src="https://github.com/AndreMuhamed/pogadon/assets/128980327/23b64a91-e2c1-47cf-aeae-144db6563c08" alt="Bot Features" width="600"/>  
-</div>  
+  <h1>🚀 Start of Discord Bot Development</h1>   </div>  
+  
+<div align="center">
+  <a href="https://github.com/AndreMuhamed/Muhamed_OneDrive/blob/main/README.md" target="_blank"><img src="https://github.com/AndreMuhamed/Muhamed_OneDrive/blob/main/Language/298489_ukraine_ukraine.png?raw=true" alt="ua" width="25" height="25"></a>
+  <a href="https://github.com/AndreMuhamed/Muhamed_OneDrive/blob/main/README_Russia.md" target="_blank"><img src="https://github.com/AndreMuhamed/Muhamed_OneDrive/blob/main/Language/298434_russia_russia.png?raw=true" alt="ru" width="25" height="25"></a>
+  <a href="https://github.com/AndreMuhamed/Muhamed_OneDrive/blob/main/README_English.md" target="_blank"><img src="https://github.com/AndreMuhamed/Muhamed_Pro-Suite/blob/main/Language/298478_kingdom_united_kingdom_united.png?raw=true" alt="en" width="25" height="25"></a>
+  <a href="https://github.com/AndreMuhamed/Muhamed_OneDrive/blob/main/README_Canadian.md" target="_blank"><img src="https://github.com/AndreMuhamed/Muhamed_Pro-Suite/blob/main/Language/298562_canada_canada.png?raw=true" alt="cn" width="25" height="25"></a>
+  <a href="https://github.com/AndreMuhamed/Muhamed_OneDrive/blob/main/README_Polish.md" target="_blank"><img src="https://github.com/AndreMuhamed/Muhamed_Pro-Suite/blob/main/Language/298479_poland_poland.png?raw=true" alt="pl" width="25" height="25"></a>
+</div>
+
+![Muhamed_OneDrive](https://github.com/AndreMuhamed/Muhamed_Pro-Suite/blob/main/Plug-photo/%D0%A8%D0%B0%D0%B1%D0%BA%D0%B0%D0%9C%D1%83%D1%85%D0%B0%D0%BC%D0%B5%D0%B4%D0%B0copyUA.jpg?raw=true)
+
+> *Muhamed_Discord-бот — це, ймовірно, назва проекту, створеного для вашого Discord-бота. Він може бути пов'язаний із персональним брендом або вказувати на те, що бот був розроблений для проектів чи спільнот Андрея Мухамеда. А можливо це вже перший сворений бот для тебе тобой.* 
+
 
 ---
 
